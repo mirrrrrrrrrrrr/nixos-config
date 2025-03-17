@@ -17,7 +17,7 @@
     ./program.nix
     ./security.nix
     ./services.nix
-    (if (host == "desktop") then "./steam.nix" else "#")
+    # ./steam
     ./system.nix
     ./flatpak.nix
     ./user.nix
