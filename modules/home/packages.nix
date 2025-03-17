@@ -34,7 +34,7 @@ in
     libnotify
     man-pages # extra man pages
     mimeo
-    mpv # video player
+    # mpv # video player
     ncdu # disk space
     nitch # systhem fetch util
     nixd # nix lsp
@@ -73,14 +73,14 @@ in
     tty-clock # cli clock
 
     ## GUI Apps
-    audacity
+    # audacity
     bleachbit # cache cleaner
     telegram-desktop
-    filezilla
+    # filezilla
     # gimp
     gnome-disk-utility
     # ldtk # 2D level editor
-    tiled # tile map editor
+    # tiled # tile map editor
     libreoffice
     nix-prefetch-github
     # obs-studio
