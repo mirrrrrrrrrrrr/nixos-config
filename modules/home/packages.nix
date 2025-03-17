@@ -75,6 +75,7 @@ in
     ## GUI Apps
     audacity
     bleachbit # cache cleaner
+    telegram-desktop
     filezilla
     # gimp
     gnome-disk-utility
