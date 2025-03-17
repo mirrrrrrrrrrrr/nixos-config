@@ -63,6 +63,10 @@ in
     yt-dlp-light
     xdg-utils
     xxd
+    libxcb
+    xorg.libXcursor
+    xorg.libXrandr
+    xorg.libXrender
     ntfs3g
 
     ## CLI
