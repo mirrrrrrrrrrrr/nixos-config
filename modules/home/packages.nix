@@ -75,7 +75,7 @@ in
     ## GUI Apps
     audacity
     bleachbit # cache cleaner
-    # filezilla
+    filezilla
     # gimp
     gnome-disk-utility
     # ldtk # 2D level editor
