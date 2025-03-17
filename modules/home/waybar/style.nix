@@ -98,7 +98,7 @@ in
     }
 
     #custom-launcher {
-      font-size: 20px;
+      font-size: 16px;
       color: ${text_color};
       font-weight: bold;
       margin-left: 15px;
