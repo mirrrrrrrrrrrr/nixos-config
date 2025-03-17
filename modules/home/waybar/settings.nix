@@ -134,7 +134,7 @@ in
       format-warning = "<span foreground='${yellow}'> </span>{capacity}%";
       interval = 5;
       states = {
-        warning = 20;
+        warning = 30;
       };
       format-time = "{H}h{M}m";
       tooltip = true;
@@ -142,8 +142,8 @@ in
     };
     "hyprland/language" = {
       format = "<span foreground='#FABD2F'> </span> {}";
-      format-fr = "FR";
       format-en = "US";
+      format-ru = "RU";
     };
     "custom/launcher" = {
       format = "";

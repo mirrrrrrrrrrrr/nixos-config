@@ -316,7 +316,7 @@
         "opacity 1.0 override 1.0 override, class:(zen)"
         "opacity 1.0 override 1.0 override, class:(evince)"
         "workspace 1, class:^(zen)$"
-        "workspace 2, class:^(VSCodium)$"
+        "workspace 2, class:^(Codium)$"
         "workspace 3, class:^(Obsidian)$"
         "workspace 4, class:^(Aseprite)$"
         "workspace 5, class:^(Audacious)$"
