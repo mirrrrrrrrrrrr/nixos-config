@@ -26,12 +26,12 @@ in {
         # C/C++
         # javascript
         # typescript
-        ms-vscode.cpptools
+        # ms-vscode.cpptools
         # ms-vscode.typescript-next
         # OCaml
         # ocamllabs.ocaml-platform
         # Zig
-        ziglang.vscode-zig
+        # ziglang.vscode-zig
 
         # Color theme
         jdinhlife.gruvbox
