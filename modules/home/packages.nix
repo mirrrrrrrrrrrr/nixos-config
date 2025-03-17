@@ -89,7 +89,7 @@ in
     mission-center # GUI resources monitor
     soundwireserver
     # thunderbird
-    # vlc
+    vlc
     # winetricks
     # wineWowPackages.wayland
     # zenity
