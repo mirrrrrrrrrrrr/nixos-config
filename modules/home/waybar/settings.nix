@@ -40,8 +40,8 @@ in
       "pulseaudio"
       # "network"
       "battery"
-      "tray"
       "hyprland/language"
+      "tray"
       "custom/notification"
     ];
     clock = {
