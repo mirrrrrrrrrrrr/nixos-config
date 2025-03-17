@@ -63,7 +63,7 @@ in
     yt-dlp-light
     xdg-utils
     xxd
-    libxcb
+    # libxcb
     xorg.libXcursor
     xorg.libXrandr
     xorg.libXrender
