@@ -37,49 +37,52 @@
       url = "github:ghostty-org/ghostty";
     };
 
-    # zig.url = "github:mitchellh/zig-overlay";
+    zig.url = "github:mitchellh/zig-overlay";
 
     nvf.url = "github:notashelf/nvf";
   };
 
-  outputs = {
-    nixpkgs,
-    self,
-    ...
-  } @ inputs: let
-    username = "mirrr";
-    system = "x86_64-linux";
-    pkgs = import nixpkgs {
-      inherit system;
-      config.allowUnfree = true;
+  outputs =
+    {
+      nixpkgs,
+      self,
+      ...
+    }@inputs:
+    let
+      username = "mirrr";
+      system = "x86_64-linux";
+      pkgs = import nixpkgs {
+        inherit system;
+        config.allowUnfree = true;
+      };
+      lib = nixpkgs.lib;
+    in
+    {
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/desktop ];
+          specialArgs = {
+            host = "desktop";
+            inherit self inputs username;
+          };
+        };
+        laptop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/laptop ];
+          specialArgs = {
+            host = "laptop";
+            inherit self inputs username;
+          };
+        };
+        vm = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [ ./hosts/vm ];
+          specialArgs = {
+            host = "vm";
+            inherit self inputs username;
+          };
+        };
+      };
     };
-    lib = nixpkgs.lib;
-  in {
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [./hosts/desktop];
-        specialArgs = {
-          host = "desktop";
-          inherit self inputs username;
-        };
-      };
-      laptop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [./hosts/laptop];
-        specialArgs = {
-          host = "laptop";
-          inherit self inputs username;
-        };
-      };
-      vm = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [./hosts/vm];
-        specialArgs = {
-          host = "vm";
-          inherit self inputs username;
-        };
-      };
-    };
-  };
 }
