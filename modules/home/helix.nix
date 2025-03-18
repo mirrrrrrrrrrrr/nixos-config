@@ -111,13 +111,13 @@
             end = "*/";
           };
 
-          grammar = {
-            name = "java";
-            source = {
-              git = "https://github.com/tree-sitter/tree-sitter-java";
-              rev = "09d650def6cdf7f479f4b78f595e9ef5b58ce31e";
-            };
-          };
+          # grammar = {
+          #   name = "java";
+          #   source = {
+          #     git = "https://github.com/tree-sitter/tree-sitter-java";
+          #     rev = "09d650def6cdf7f479f4b78f595e9ef5b58ce31e";
+          #   };
+          # };
         }
         # rust
         {
@@ -152,14 +152,13 @@
               "--stdin"
             ];
           };
-          grammar = {
-            name = "zig";
-            source = {
-              git = "https://github.com/tree-sitter-grammars/tree-sitter-zig";
-              rev = "eb7d58c2dc4fbeea4745019dee8df013034ae66b";
-            };
-
-          };
+          # grammar = {
+          #   name = "zig";
+          #   source = {
+          #     git = "https://github.com/tree-sitter-grammars/tree-sitter-zig";
+          #     rev = "eb7d58c2dc4fbeea4745019dee8df013034ae66b";
+          #   };
+          # };
 
         }
         # nix
