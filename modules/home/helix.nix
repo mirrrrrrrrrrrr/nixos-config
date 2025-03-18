@@ -5,6 +5,7 @@
 
     # User settings
     settings = {
+      theme = "base16_transparent";
       editor = {
         line-number = "relative";
         mouse = true;
@@ -285,7 +286,6 @@
       };
     };
 
-    theme = "base16_transparent";
     ignores = [
       "node_modules"
     ];
