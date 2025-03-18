@@ -1,15 +1,15 @@
-{pkgs, ...}: let
-  jonathanharty.gruvbox-material-icon-theme =
-    pkgs.vscode-utils.buildVscodeMarketplaceExtension
-    {
-      mktplcRef = {
-        name = "gruvbox-material-icon-theme";
-        publisher = "JonathanHarty";
-        version = "1.1.5";
-        hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
-      };
+{ pkgs, ... }:
+let
+  jonathanharty.gruvbox-material-icon-theme = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
+    mktplcRef = {
+      name = "gruvbox-material-icon-theme";
+      publisher = "JonathanHarty";
+      version = "1.1.5";
+      hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
     };
-in {
+  };
+in
+{
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -27,11 +27,11 @@ in {
         # javascript
         # typescript
         # ms-vscode.cpptools
-        # ms-vscode.typescript-next
+        ms-vscode.typescript-next
         # OCaml
         # ocamllabs.ocaml-platform
         # Zig
-        # ziglang.vscode-zig
+        ziglang.vscode-zig
 
         # Color theme
         jdinhlife.gruvbox
@@ -94,7 +94,7 @@ in {
         "C_Cpp.vcFormat.indent.caseLabels" = true;
         "C_Cpp.intelliSenseCacheSize" = 2048;
         "C_Cpp.intelliSenseMemoryLimit" = 2048;
-        "C_Cpp.default.browse.path" = [''''${workspaceFolder}/**''];
+        "C_Cpp.default.browse.path" = [ ''''${workspaceFolder}/**'' ];
         "C_Cpp.default.cStandard" = "gnu11";
         "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores" = false;
         "C_Cpp.intelliSenseUpdateDelay" = 500;
