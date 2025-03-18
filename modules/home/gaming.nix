@@ -3,7 +3,8 @@
   config,
   inputs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     ## Utils
     # gamemode
@@ -17,7 +18,7 @@
     ## Cli games
     _2048-in-terminal
     vitetris
-    nethack
+    # nethack
 
     ## Celeste
     # celeste-classic
