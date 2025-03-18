@@ -35,7 +35,7 @@ in
 
     window#waybar {
       background: #282828;
-      border-top: 1px solid #928374;
+      border-bottom: 1px solid #928374;
     }
 
     tooltip {
