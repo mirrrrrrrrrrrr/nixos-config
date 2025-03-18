@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{pkgs, ...}: {
   programs.helix = {
     enable = true;
     defaultEditor = true;
@@ -22,7 +21,7 @@
             "mode"
             "spinner"
           ];
-          center = [ "file-name" ];
+          center = ["file-name"];
           right = [
             "diagnostics"
             "selections"
@@ -42,7 +41,7 @@
           C-s = ":w!";
           C-w = ":buffer-close";
           C-a = ":reload-all";
-          C-v = [ ":clipboard-paste-before" ];
+          C-v = [":clipboard-paste-before"];
           C-r = ":fmt";
         };
         insert = {
@@ -54,7 +53,7 @@
             ":buffer-close"
             "normal_mode"
           ];
-          C-v = [ ":clipboard-paste-before" ];
+          C-v = [":clipboard-paste-before"];
         };
       };
     };
@@ -72,7 +71,7 @@
             "package.json"
           ];
           auto-format = true;
-          language-servers = [ "deno-lsp" ];
+          language-servers = ["deno-lsp"];
         }
         # javascript
         {
@@ -83,7 +82,7 @@
             "package.json"
           ];
           auto-format = true;
-          language-servers = [ "deno-lsp" ];
+          language-servers = ["deno-lsp"];
         }
         # java
         {
@@ -100,12 +99,12 @@
             "build.gradle"
             "build.gradle.kts"
           ];
-          language-servers = [ "jdtls" ];
+          language-servers = ["jdtls"];
           indent = {
             tab-width = 2;
             unit = "  ";
           };
-          comment-tokens = [ "//" ];
+          comment-tokens = ["//"];
           block-comment-tokens = {
             start = "/*";
             end = "*/";
@@ -133,14 +132,14 @@
             "zig"
             "zon"
           ];
-          roots = [ "build.zig" ];
+          roots = ["build.zig"];
           auto-format = true;
           comment-tokens = [
             "//"
             "///"
             "//!"
           ];
-          language-servers = [ "zls" ];
+          language-servers = ["zls"];
           indent = {
             tab-width = 2;
             unit = "  ";
@@ -159,15 +158,14 @@
           #     rev = "eb7d58c2dc4fbeea4745019dee8df013034ae66b";
           #   };
           # };
-
         }
         # nix
         {
           name = "nix";
           scope = "source.nix";
           injection-regex = "nix";
-          file-types = [ "nix" ];
-          shebangs = [ ];
+          file-types = ["nix"];
+          shebangs = [];
           auto-format = true;
           comment-token = "#";
           language-servers = [
@@ -198,23 +196,23 @@
             "geojson"
             " gltf"
             "webmanifest"
-            { glob = "flake.lock"; }
-            { glob = ".babelrc"; }
-            { glob = ".bowerrc"; }
-            { glob = ".jscrc"; }
+            {glob = "flake.lock";}
+            {glob = ".babelrc";}
+            {glob = ".bowerrc";}
+            {glob = ".jscrc";}
             "js.map"
             "ts.map"
             "css.map"
-            { glob = ".jslintrc"; }
+            {glob = ".jslintrc";}
             "jsonl"
             "jsonld"
-            { glob = ".vuerc"; }
-            { glob = "composer.lock"; }
-            { glob = ".watchmanconfig"; }
+            {glob = ".vuerc";}
+            {glob = "composer.lock";}
+            {glob = ".watchmanconfig";}
             "avsc"
             "ldtk"
             "ldtkl"
-            { glob = ".swift-format"; }
+            {glob = ".swift-format";}
           ];
         }
         {
@@ -252,7 +250,7 @@
         # deno
         deno-lsp = {
           command = "deno";
-          args = [ "lsp" ];
+          args = ["lsp"];
           config.deno.enable = true;
         };
         # typescript
@@ -266,7 +264,7 @@
         # nil
         nil = {
           command = "nil";
-          args = [ "--stdio" ];
+          args = ["--stdio"];
         };
         # json
         vscode-json-language-server = {
@@ -287,7 +285,7 @@
       };
     };
 
-    # themes = "tokyonight";
+    themes = "base16_transparent";
     ignores = [
       "node_modules"
     ];
