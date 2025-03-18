@@ -3,17 +3,19 @@
   pkgs,
   host,
   ...
-}:
-let
+}: let
   ghostty = inputs.ghostty.packages.x86_64-linux.default;
-in
-{
-  home.packages = (with pkgs; [ ghostty ]);
+in {
+  home.packages = with pkgs; [ghostty];
 
   xdg.configFile."ghostty/config".text = ''
     # Font
     font-family = "Maple Mono"
-    font-size = ${if (host == "laptop") then "14" else "16"}
+    font-size = ${
+      if (host == "laptop")
+      then "12"
+      else "14"
+    }
     font-thicken = true
     font-feature = ss01
     font-feature = ss04
@@ -35,8 +37,8 @@ in
     mouse-hide-while-typing = true
 
     window-theme = ghostty
-    window-padding-x = 4
-    window-padding-y = 6
+    window-padding-x = 2
+    window-padding-y = 3
     window-padding-balance = true
     window-padding-color = background
     window-inherit-working-directory = true
