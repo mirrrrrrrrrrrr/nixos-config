@@ -94,6 +94,7 @@ in
     nix-prefetch-github
     # obs-studio
     pavucontrol # pulseaudio volume controle (GUI)
+    postman
     # pitivi                            # video editing
     gnome-calculator # calculator
     mission-center # GUI resources monitor
