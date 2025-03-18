@@ -1,5 +1,4 @@
-{ ... }:
-let
+{...}: let
   custom = {
     font = "Maple Mono";
     font_size = "14px";
@@ -19,8 +18,7 @@ let
     opacity = "1";
     indicator_height = "2px";
   };
-in
-{
+in {
   programs.waybar.style = with custom; ''
     * {
       border: none;
@@ -36,6 +34,7 @@ in
     window#waybar {
       background: #282828;
       border-bottom: 1px solid #928374;
+      opacity: 0.9;
     }
 
     tooltip {
