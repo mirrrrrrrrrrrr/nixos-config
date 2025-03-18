@@ -63,10 +63,15 @@ in
     yt-dlp-light
     xdg-utils
     xxd
-    # libxcb
+    xorg.libxcb
     xorg.libXcursor
     xorg.libXrandr
     xorg.libXrender
+    xorg.xcbutilwm
+    xorg.xcbutilimage
+    xorg.xcbutilkeysyms
+    xorg.xcbutilrenderutil
+    xcb-util-cursor
     ntfs3g
 
     ## CLI
