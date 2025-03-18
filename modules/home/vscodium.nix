@@ -27,7 +27,7 @@ in
         # javascript
         # typescript
         # ms-vscode.cpptools
-        ms-vscode.vscode-typescript-next
+        vscode-typescript-next
         # OCaml
         # ocamllabs.ocaml-platform
         # Zig
