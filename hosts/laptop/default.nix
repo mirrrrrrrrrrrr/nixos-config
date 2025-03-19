@@ -1,5 +1,8 @@
-{ pkgs, config, ... }:
 {
+  pkgs,
+  config,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
     ./../../modules/core
@@ -10,6 +13,7 @@
     brightnessctl
     cpupower-gui
     powertop
+    # (callPackage ../../pkgs/zigup/default.nix {})
   ];
 
   services = {
@@ -51,13 +55,12 @@
   powerManagement.cpuFreqGovernor = "performance";
 
   boot = {
-    kernelModules = [ "acpi_call" ];
-    extraModulePackages =
-      with config.boot.kernelPackages;
+    kernelModules = ["acpi_call"];
+    extraModulePackages = with config.boot.kernelPackages;
       [
         acpi_call
         cpupower
       ]
-      ++ [ pkgs.cpupower-gui ];
+      ++ [pkgs.cpupower-gui];
   };
 }
