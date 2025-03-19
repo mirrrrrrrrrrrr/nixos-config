@@ -4,8 +4,7 @@
   pkgs,
   host,
   ...
-}:
-{
+}: {
   programs.zsh = {
     shellAliases = {
       # Utils
@@ -33,6 +32,7 @@
 
       # Nixos
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
+      conf = "cd ~/nixos-config && y";
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";
       nb = "nom build";
