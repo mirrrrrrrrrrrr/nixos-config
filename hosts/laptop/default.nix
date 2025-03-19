@@ -13,7 +13,7 @@
     brightnessctl
     cpupower-gui
     powertop
-    (callPackage ../../pkgs/zigup/default.nix {})
+    # (callPackage ../../pkgs/zigup/default.nix {})
   ];
 
   services = {

@@ -13,8 +13,8 @@ in {
     font-family = "Maple Mono"
     font-size = ${
       if (host == "laptop")
-      then "10"
-      else "12"
+      then "11"
+      else "13"
     }
     font-thicken = true
     font-feature = ss01
