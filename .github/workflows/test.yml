@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Free up disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
+          df -h
       - name: Check out the repository
         uses: actions/checkout@v4
 
@@ -29,6 +33,11 @@ jobs:
         hostname: [desktop, laptop, vm]
 
     steps:
+      - name: Free up disk space
+        run: |
+          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
+          df -h
+          
       - name: Check out the repository
         uses: actions/checkout@v4
 
@@ -42,6 +51,9 @@ jobs:
 
       - name: Check up flake configuration
         run: nix flake check --all-systems --show-trace
+
+      - name: Clean up Nix store
+        run: nix-collect-garbage -d
 
       - name: Build NixOS configuration
         run: nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel --show-trace
