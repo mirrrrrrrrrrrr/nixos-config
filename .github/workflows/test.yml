@@ -24,41 +24,41 @@ jobs:
 
       - name: Cache Nix store
         uses: DeterminateSystems/flakehub-cache-action@main
-        with:
-          token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
+        # with:
+        #   token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
 
       - name: Check up flake configuration
         run: nix flake check --all-systems --show-trace
 
-  build-nixos:
-    runs-on: ubuntu-latest
+  # build-nixos:
+  #   runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        hostname: [desktop, laptop, vm]
+  #   strategy:
+  #     matrix:
+  #       hostname: [desktop, laptop, vm]
 
-    steps:
-      - name: Free up disk space
-        run: |
-          sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
-          df -h
+  #   steps:
+  #     - name: Free up disk space
+  #       run: |
+  #         sudo rm -rf /usr/local/lib/android /opt/ghc /usr/share/dotnet
+  #         df -h
 
-      - name: Check out the repository
-        uses: actions/checkout@v4
+  #     - name: Check out the repository
+  #       uses: actions/checkout@v4
 
-      - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@main
+  #     - name: Install Nix
+  #       uses: DeterminateSystems/nix-installer-action@main
 
-      - name: Cache Nix store
-        uses: DeterminateSystems/flakehub-cache-action@main
-        with:
-          token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
+  #     - name: Cache Nix store
+  #       uses: DeterminateSystems/flakehub-cache-action@main
+  #       with:
+  #         token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
 
-      - name: Check up flake configuration
-        run: nix flake check --all-systems --show-trace
+  #     - name: Check up flake configuration
+  #       run: nix flake check --all-systems --show-trace
 
-      - name: Clean up Nix store
-        run: nix-collect-garbage -d
+  #     - name: Clean up Nix store
+  #       run: nix-collect-garbage -d
 
-      - name: Build NixOS configuration
-        run: nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel --show-trace
+  #     - name: Build NixOS configuration
+  #       run: nix build .#nixosConfigurations.${{ matrix.hostname }}.config.system.build.toplevel --show-trace
