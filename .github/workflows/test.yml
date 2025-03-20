@@ -51,8 +51,8 @@ jobs:
 
   #     - name: Cache Nix store
   #       uses: DeterminateSystems/flakehub-cache-action@main
-  #       # with:
-  #       #   token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
+  #       with:
+  #         token: ${{ secrets.FLAKEHUB_AUTH_TOKEN }}
 
   #     - name: Check up flake configuration
   #       run: nix flake check --all-systems --show-trace
