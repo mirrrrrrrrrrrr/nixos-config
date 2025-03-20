@@ -38,7 +38,7 @@
    Screenshots last updated <b>2025-01-05</b>
 </p>
 
-Here is my previous Catppuccin rice. You can find it [here](https://github.com/Frost-Phoenix/nixos-config/tree/catppuccin)
+Here is my previous Catppuccin rice. You can find it [here](https://github.com/mirrrrrrrrrrrr/nixos-config/tree/catppuccin)
 <details>
 <summary>
 Catppuccin (EXPAND)
@@ -379,7 +379,7 @@ First install nixos using any [graphical ISO image](https://nixos.org/download.h
 
 ```bash
 nix-shell -p git
-git clone https://github.com/Frost-Phoenix/nixos-config
+git clone https://github.com/mirrrrrrrrrrrr/nixos-config
 cd nixos-config
 ```
 #### 3. **Install script**
@@ -474,7 +474,7 @@ Other dotfiles that I learned / copy from:
 
 <!-- # ✨ Stars History -->
 
-<!-- <p align="center"><img src="https://api.star-history.com/svg?repos=frost-phoenix/nixos-config&type=Timeline&theme=dark" /></p> -->
+<!-- <p align="center"><img src="https://api.star-history.com/svg?repos=mirrrrrrrrrrrr/nixos-config&type=Timeline&theme=dark" /></p> -->
 
 <p align="center"><img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/footers/gray0_ctp_on_line.svg?sanitize=true" /></p>
 
