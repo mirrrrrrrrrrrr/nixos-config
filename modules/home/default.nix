@@ -1,9 +1,10 @@
 {
-  inputs,
-  username,
-  host,
+  # inputs,
+  # username,
+  # host,
   ...
-}: {
+}:
+{
   imports = [
     ./aseprite/aseprite.nix # pixel art editor
     # ./audacious.nix # music player
@@ -37,6 +38,7 @@
     ./swaylock.nix # lock screen
     ./swayosd.nix # brightness / volume wiget
     ./swaync/swaync.nix # notification deamon
+    ./tmux.nix # tmux terminal window manager
     # ./viewnior.nix                    # image viewer
     ./vscodium.nix # vscode forck
     ./waybar # status bar
