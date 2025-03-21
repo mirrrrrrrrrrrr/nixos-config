@@ -1,8 +1,8 @@
 {
-  hostname,
-  config,
+  # hostname,
+  # config,
   pkgs,
-  host,
+  # host,
   ...
 }:
 {
@@ -164,6 +164,11 @@
         }
         zle -N zle-line-init
         zle -N zle-line-finish
+      fi
+
+      # Start Tmux automatically if not already running. No Tmux in TTY
+      if [ -z "$TMUX" ] && [ -n "$DISPLAY" ]; then
+        tmux attach-session -t default || tmux new-session -s default
       fi
     '';
   };
