@@ -54,7 +54,7 @@ in
       color: ${yellow};
       padding-left:  5px;
       padding-right: 5px;
-      margin-right: 5px;
+      # margin-right: 5px;
     }
     #workspaces button.empty {
       color: ${text_color};
