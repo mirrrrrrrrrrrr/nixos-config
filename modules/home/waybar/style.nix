@@ -29,13 +29,10 @@ in
       margin: 0;
       font-family: ${font};
       font-weight: ${font_weight};
-      opacity: ${opacity};
       font-size: ${font_size};
     }
 
     window#waybar {
-      background: rgba(28, 28, 28, 0.7);
-      
       border-bottom: 1px solid #928374;
     }
 
