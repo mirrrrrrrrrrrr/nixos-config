@@ -33,6 +33,7 @@ in
     }
 
     window#waybar {
+      background: rgba(28, 28, 28, 0.5);
       border-bottom: 1px solid #928374;
     }
 
