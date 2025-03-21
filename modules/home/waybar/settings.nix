@@ -178,7 +178,7 @@ in
         escape = true;
       };
     };
-    layerrule = [
+    layerrule = builtins.toJSON [
       "blur,waybar"
       "ignorezero,waybar"
     ];
