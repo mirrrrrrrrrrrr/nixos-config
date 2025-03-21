@@ -1,4 +1,7 @@
-{ host, ... }:
+{
+  # host,
+  ...
+}:
 let
   custom = {
     font = "Maple Mono";
