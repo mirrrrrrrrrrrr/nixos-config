@@ -36,7 +36,8 @@ in
     modules-right = [
       "cpu"
       "memory"
-      (if (host == "desktop") then "disk" else "")
+      "disk"
+      # (if (host == "desktop") then "disk" else "")
       "pulseaudio"
       # "network"
       "battery"
