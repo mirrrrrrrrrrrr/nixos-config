@@ -36,7 +36,6 @@ in
     window#waybar {
       background: #282828;
       border-bottom: 1px solid #928374;
-      backdrop-filter: blur(10px);
     }
 
     tooltip {
