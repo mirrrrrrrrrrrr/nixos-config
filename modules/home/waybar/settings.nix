@@ -1,7 +1,11 @@
-{host, ...}: let
+{
+  # host,
+  ...
+}:
+let
   custom = {
     font = "Maple Mono";
-    font_size = "14px";
+    font_size = "12px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -17,11 +21,12 @@
     opacity = "1";
     indicator_height = "2px";
   };
-in {
+in
+{
   programs.waybar.settings.mainBar = with custom; {
     position = "top";
     layer = "top";
-    height = 26;
+    height = 24;
     margin-top = 0;
     margin-bottom = 0;
     margin-left = 0;
@@ -30,15 +35,12 @@ in {
       "custom/launcher"
       "hyprland/workspaces"
     ];
-    modules-center = ["clock"];
+    modules-center = [ "clock" ];
     modules-right = [
       "cpu"
       "memory"
-      (
-        if (host == "desktop")
-        then "disk"
-        else ""
-      )
+      "disk"
+      # (if (host == "desktop") then "disk" else "")
       "pulseaudio"
       # "network"
       "battery"
@@ -76,30 +78,30 @@ in {
         sort-by-number = true;
       };
       persistent-workspaces = {
-        "1" = [];
-        "2" = [];
-        "3" = [];
-        "4" = [];
-        "5" = [];
+        "1" = [ ];
+        "2" = [ ];
+        "3" = [ ];
+        "4" = [ ];
+        "5" = [ ];
       };
     };
     cpu = {
       format = "<span foreground='${green}'> </span> {usage}%";
       format-alt = "<span foreground='${green}'> </span> {avg_frequency} GHz";
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=12 --title float_kitty btop'";
     };
     memory = {
       format = "<span foreground='${cyan}'>󰟜 </span>{}%";
       format-alt = "<span foreground='${cyan}'>󰟜 </span>{used} GiB"; # 
       interval = 2;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=12 --title float_kitty btop'";
     };
     disk = {
       # path = "/";
       format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
       interval = 60;
-      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=14 --title float_kitty btop'";
+      on-click-right = "hyprctl dispatch exec '[float; center; size 950 650] kitty --override font_size=12 --title float_kitty btop'";
     };
     network = {
       format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
@@ -116,7 +118,7 @@ in {
       format = "{icon} {volume}%";
       format-muted = "<span foreground='${blue}'> </span> {volume}%";
       format-icons = {
-        default = ["<span foreground='${blue}'> </span>"];
+        default = [ "<span foreground='${blue}'> </span>" ];
       };
       scroll-step = 2;
       on-click = "pamixer -t";

@@ -1,7 +1,8 @@
-{...}: let
+{ ... }:
+let
   custom = {
     font = "Maple Mono";
-    font_size = "14px";
+    font_size = "12px";
     font_weight = "bold";
     text_color = "#FBF1C7";
     background_0 = "#1D2021";
@@ -18,7 +19,8 @@
     opacity = "1";
     indicator_height = "2px";
   };
-in {
+in
+{
   programs.waybar.style = with custom; ''
     * {
       border: none;
@@ -27,12 +29,11 @@ in {
       margin: 0;
       font-family: ${font};
       font-weight: ${font_weight};
-      opacity: ${opacity};
       font-size: ${font_size};
     }
 
     window#waybar {
-      background: #282828;
+      background: rgba(28, 28, 28, 0.5);
       border-bottom: 1px solid #928374;
     }
 
@@ -45,14 +46,11 @@ in {
       color: ${text_color};
     }
 
-    #workspaces {
-      padding-left: 15px;
-    }
+
     #workspaces button {
       color: ${yellow};
       padding-left:  5px;
       padding-right: 5px;
-      margin-right: 10px;
     }
     #workspaces button.empty {
       color: ${text_color};
@@ -81,25 +79,25 @@ in {
     #pulseaudio, #network, #cpu, #memory, #disk, #battery, #language, #custom-notification {
       padding-left: 5px;
       padding-right: 5px;
-      margin-right: 10px;
+      margin-right: 5px;
       color: ${text_color};
     }
 
     #pulseaudio, #language {
-      margin-left: 15px;
+      margin-left: 5px;
     }
 
     #custom-notification {
-      margin-left: 15px;
+      margin-left: 5px;
       padding-right: 2px;
       margin-right: 5px;
     }
 
     #custom-launcher {
-      font-size: 16px;
+      font-size: 12px;
       color: ${text_color};
       font-weight: bold;
-      margin-left: 15px;
+      margin-left: 5px;
       padding-right: 10px;
     }
   '';

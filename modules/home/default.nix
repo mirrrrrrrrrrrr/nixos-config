@@ -7,7 +7,7 @@
 {
   imports = [
     ./aseprite/aseprite.nix # pixel art editor
-    # ./audacious.nix # music player
+    ./audacious.nix # music player
     ./bat.nix # better cat command
     ./browser.nix # firefox based browser
     ./btop.nix # resouces monitor
@@ -26,7 +26,7 @@
     ./lazygit.nix
     ./micro.nix # nano replacement
     ./nemo.nix # file manager
-    ./nvim.nix # neovim editor
+    ./neovim # neovim editor
     ./obsidian.nix
     ./p10k/p10k.nix
     ./packages.nix # other packages
