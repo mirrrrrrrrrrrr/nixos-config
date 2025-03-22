@@ -8,7 +8,7 @@ let
 in
 {
   home.packages = with pkgs; [
-    # _2048
+    _2048
 
     ## CLI utility
     ani-cli
