@@ -30,8 +30,12 @@ in
         # ms-vscode.vscode-typescript-next
         # OCaml
         # ocamllabs.ocaml-platform
+
         # Zig
         ziglang.vscode-zig
+
+        # Angular
+        angular.ng-template
 
         # Color theme
         jdinhlife.gruvbox

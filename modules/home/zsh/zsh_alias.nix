@@ -33,7 +33,7 @@
 
       # Nixos
       cdnix = "cd ~/nixos-config && codium ~/nixos-config";
-      conf = "cd ~/nixos-config && y";
+      conf = "cd ~/nixos-config && v";
       ns = "nom-shell --run zsh";
       nd = "nom develop --command zsh";
       nb = "nom build";
