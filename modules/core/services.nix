@@ -14,6 +14,13 @@
       gcr
       gnome-settings-daemon
     ];
+
+    # database
+    mysql = {
+      enable = true;
+      package = "mariadb";
+    };
+
   };
   services.logind.extraConfig = ''
     # don’t shutdown when power button is short-pressed
