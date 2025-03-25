@@ -104,6 +104,7 @@ in
     # winetricks
     # wineWowPackages.wayland
     # zenity
+    mysql-workbench
 
     # C / C++
     gcc
