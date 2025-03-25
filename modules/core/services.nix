@@ -18,7 +18,7 @@
     # database
     mysql = {
       enable = true;
-      package = "mariadb";
+      package = pkgs.mariadb;
     };
 
   };
