@@ -37,6 +37,9 @@ in
         # Angular
         angular.ng-template
 
+        # mysql
+        cweijan.vscode-mysql-client2
+
         # Color theme
         jdinhlife.gruvbox
         # sainnhe.gruvbox-material
