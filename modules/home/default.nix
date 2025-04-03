@@ -22,7 +22,7 @@
     ./gtk.nix # gtk theme
     ./hyprland # window manager
     ./helix.nix # helix text editor
-    ./kitty.nix # terminal
+    # ./kitty.nix # terminal
     ./lazygit.nix
     ./micro.nix # nano replacement
     ./nemo.nix # file manager
