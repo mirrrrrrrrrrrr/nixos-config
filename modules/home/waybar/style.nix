@@ -1,7 +1,7 @@
 { ... }:
 let
   custom = {
-    font = "Maple Mono";
+    font = "ComicShannsMono";
     font_size = "12px";
     font_weight = "bold";
     text_color = "#FBF1C7";
@@ -57,6 +57,7 @@ in
     }
     #workspaces button.active {
       color: ${orange_bright};
+      background: ${background_1}
     }
 
     #clock {

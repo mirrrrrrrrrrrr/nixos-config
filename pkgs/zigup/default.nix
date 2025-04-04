@@ -4,7 +4,7 @@
   lib,
   ...
 }:
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "zigup";
   version = "latest";
 

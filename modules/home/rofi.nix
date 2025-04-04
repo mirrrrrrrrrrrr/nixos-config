@@ -21,7 +21,7 @@
       modi: "run,drun,window";
       lines: 5;
       cycle: false;
-      font: "Maple Mono Bold 16";
+      font: "ComicShannsMono Bold 16";
       show-icons: true;
       icon-theme: "Papirus-dark";
       terminal: "ghostty";

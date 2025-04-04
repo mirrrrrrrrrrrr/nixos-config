@@ -1,10 +1,10 @@
-{ pkgs, config, ... }:
-let
-  monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix { };
-  monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {
-    inherit monolisa;
-  };
-in
+{ pkgs, ... }:
+# let
+#   monolisa = pkgs.callPackage ../../pkgs/monolisa/monolisa.nix { };
+#   monolisa-nerd = pkgs.callPackage ../../pkgs/monolisa/monolisa-nerd.nix {
+#     inherit monolisa;
+#   };
+# in
 {
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
@@ -12,10 +12,11 @@ in
     nerd-fonts.fira-code
     nerd-fonts.caskaydia-cove
     nerd-fonts.symbols-only
+    nerd-fonts.comic-shanns-mono
     twemoji-color-font
     noto-fonts-emoji
     fantasque-sans-mono
-    maple-mono
+    # maple-mono
     # monolisa
     # monolisa-nerd
   ];
@@ -23,7 +24,7 @@ in
   gtk = {
     enable = true;
     font = {
-      name = "Maple Mono";
+      name = "Comic Shanns Mono";
       size = 12;
     };
     theme = {

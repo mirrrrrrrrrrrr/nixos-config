@@ -6,7 +6,7 @@
     themeFile = "gruvbox-dark-hard";
 
     font = {
-      name = "Maple Mono";
+      name = "ComicShannsMono";
       size = if (host == "laptop") then 15 else 16;
     };
 
