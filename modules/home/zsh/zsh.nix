@@ -4,8 +4,7 @@
   pkgs,
   # host,
   ...
-}:
-{
+}: {
   programs.zsh = {
     enable = true;
     # enableCompletion = true;

@@ -4,9 +4,7 @@
   # inputs,
   ...
 }:
-with lib;
-let
-
+with lib; let
   extra-path = with pkgs; [
     dotnetCorePackages.sdk_8_0
     dotnetPackages.Nuget
@@ -44,8 +42,7 @@ let
       ''
       + attrs.postInstall or "";
   });
-in
-{
+in {
   home.packages = with pkgs; [
     _rider
     dotnet-sdk_8
@@ -54,18 +51,16 @@ in
   # Unity Rider plugin looks here for a .desktop file,
   # which it uses to find the path to the rider binary.
   home.file = {
-    ".local/share/applications/jetbrains-rider.desktop".source =
-      let
-        desktopFile = pkgs.makeDesktopItem {
-          name = "jetbrains-rider";
-          desktopName = "Rider";
-          exec = "\"${_rider}/bin/rider\"";
-          icon = "rider";
-          type = "Application";
-          # Don't show desktop icon in search or run launcher
-          extraConfig.NoDisplay = "true";
-        };
-      in
-      "${desktopFile}/share/applications/jetbrains-rider.desktop";
+    ".local/share/applications/jetbrains-rider.desktop".source = let
+      desktopFile = pkgs.makeDesktopItem {
+        name = "jetbrains-rider";
+        desktopName = "Rider";
+        exec = "\"${_rider}/bin/rider\"";
+        icon = "rider";
+        type = "Application";
+        # Don't show desktop icon in search or run launcher
+        extraConfig.NoDisplay = "true";
+      };
+    in "${desktopFile}/share/applications/jetbrains-rider.desktop";
   };
 }

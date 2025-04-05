@@ -5,8 +5,7 @@
   username,
   host,
   ...
-}:
-{
+}: {
   imports = [
     ./bootloader.nix
     ./hardware.nix
