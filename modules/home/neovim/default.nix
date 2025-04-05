@@ -17,8 +17,7 @@ let
   # the path to nvim directory
   # to make this symlink work, we need to git clone this repo to your home directory.
   configPath = "${config.home.homeDirectory}/nixos-config/modules/home/neovim/nvim";
-in
-{
+in {
   xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink configPath;
 
   home.shellAliases = shellAliases;

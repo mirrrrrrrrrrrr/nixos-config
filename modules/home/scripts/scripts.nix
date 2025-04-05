@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   wall-change = pkgs.writeShellScriptBin "wall-change" (
     builtins.readFile ./scripts/wall-change.sh
   );
@@ -60,8 +59,7 @@ let
   power-menu = pkgs.writeScriptBin "power-menu" (
     builtins.readFile ./scripts/power-menu.sh
   );
-in
-{
+in {
   home.packages = with pkgs; [
     wall-change
     wallpaper-picker

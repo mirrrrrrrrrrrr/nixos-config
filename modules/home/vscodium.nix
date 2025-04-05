@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-let
+{pkgs, ...}: let
   jonathanharty.gruvbox-material-icon-theme = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
     mktplcRef = {
       name = "gruvbox-material-icon-theme";
@@ -8,8 +7,7 @@ let
       hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
     };
   };
-in
-{
+in {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
@@ -95,7 +93,7 @@ in
         "C_Cpp.vcFormat.indent.caseLabels" = true;
         "C_Cpp.intelliSenseCacheSize" = 2048;
         "C_Cpp.intelliSenseMemoryLimit" = 2048;
-        "C_Cpp.default.browse.path" = [ ''''${workspaceFolder}/**'' ];
+        "C_Cpp.default.browse.path" = [''''${workspaceFolder}/**''];
         "C_Cpp.default.cStandard" = "gnu11";
         "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores" = false;
         "C_Cpp.intelliSenseUpdateDelay" = 500;

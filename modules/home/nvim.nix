@@ -2,9 +2,8 @@
   pkgs,
   inputs,
   ...
-}:
-{
-  imports = [ inputs.nvf.homeManagerModules.default ];
+}: {
+  imports = [inputs.nvf.homeManagerModules.default];
 
   programs.neovim = {
     enable = true;
